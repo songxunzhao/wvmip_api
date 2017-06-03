@@ -1,0 +1,7 @@
+#schema
+#routine
+./routine/fx_blocked_users_create.sql
+./routine/fx_blocked_users_delete_by_source.sql
+./routine/fx_blocked_users_list_by_blocked_user.sql
+./routine/fx_users_create.sql
+#seed

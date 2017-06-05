@@ -15,7 +15,7 @@ class Account extends AppController{
     public function block_profile_access(Request $request, Response $response) {
         $parsed_body = $request->getParsedBody();
         $validator = new Validator($parsed_body);
-        $validator->rule('required', ['id']);
+        $validator->rule('required', ['id', 'blocked_list']);
         $validator->rule('array', ['blocked_list']);
         if($validator->validate()) {
             $user_model = new User($this->ci->get('db'));
@@ -52,7 +52,7 @@ class Account extends AppController{
     public function block_story_access(Request $request, Response $response) {
         $parsed_body = $request->getParsedBody();
         $validator = new Validator($parsed_body);
-        $validator->rule('required', ['id']);
+        $validator->rule('required', ['id', 'blocked_story_list']);
         $validator->rule('array', ['blocked_story_list']);
         if($validator->validate()) {
             $user_model = new User($this->ci->get('db'));

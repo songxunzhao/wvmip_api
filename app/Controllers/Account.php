@@ -28,7 +28,8 @@ class Account extends AppController{
                 'source_type'   => 1
             ]);
 
-            foreach($parsed_body['blocked_list'] as $blocked_user_id) {
+            $blocked_list = array_unique($parsed_body['blocked_list']);
+            foreach($blocked_list as $blocked_user_id) {
                 $blocked_user_model->create([
                     'user_id'           => $user['id'],
                     'blocked_user_id'   =>  $blocked_user_id,
@@ -65,7 +66,8 @@ class Account extends AppController{
                 'source_type'   => 2
             ]);
 
-            foreach($parsed_body['blocked_story_list'] as $blocked_user_id) {
+            $blocked_story_list = array_unique($parsed_body['blocked_story_list']);
+            foreach($blocked_story_list as $blocked_user_id) {
                 $blocked_user_model->create([
                     'user_id'           => $user['id'],
                     'blocked_user_id'   => $blocked_user_id,

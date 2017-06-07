@@ -14,7 +14,7 @@ use App\DB\Models\BlockedUser as BlockedUserModel;
 
 class User extends AppController{
 
-    public function blocking_user(Request $request, Response $response, $args) {
+    public function  blocking_user(Request $request, Response $response, $args) {
         $blocked_user_model = new BlockedUserModel($this->ci->get('db'));
 
         $result = $blocked_user_model->list_by_blocked_user([

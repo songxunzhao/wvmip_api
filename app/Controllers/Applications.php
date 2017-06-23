@@ -23,6 +23,11 @@ class Applications extends AppController{
                     ]
                 ];
                 break;
+            default:
+                $result = [
+                    "success"   => false,
+                    "message"   => "App doesn't exist"
+                ];
         }
         return $response->withJson($result);
     }

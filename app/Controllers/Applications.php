@@ -1,14 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: songxun
- * Date: 6/24/2017
- * Time: 1:03 AM
- */
+namespace App\Controllers;
 
 use Valitron\Validator;
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
+use App\Library\AppController;
 
 class Applications extends AppController{
 

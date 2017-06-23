@@ -47,5 +47,6 @@ $app->group('/user/{id}', function() {
     $this->get('/blocking_story_user',      'App\Controllers\User:blocking_story_user');
 });
 
+$app->post('/applications/mode',             'App\Controllers\Applications::get_mode');
 $app->run();
 $conn = null;

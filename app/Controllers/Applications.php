@@ -23,6 +23,14 @@ class Applications extends AppController{
                     ]
                 ];
                 break;
+            case "instareports":
+                $result = [
+                    'success'   => true,
+                    'data'      => [
+                        'mode'  => 'dev'
+                    ]
+                ];
+                break;
             default:
                 $result = [
                     "success"   => false,
